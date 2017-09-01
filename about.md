@@ -13,7 +13,7 @@ header-img: "img/green.jpg"
 
 
 <center>
-    <font size="7">ptmax——程序小白进化ing</font>
+    <font size="4">ptmax——程序小白进化ing</font>
 </center>
 
 
