@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About"
-description: ""
+description: "小猿进化史"
 header-img: "img/green.jpg"
 ---
 
