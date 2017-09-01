@@ -1,15 +1,16 @@
-title: "小猿进化史"
+# Site settings
+title: 读立写生
 header-img: "img/green.jpg"
 tagline: "cn"  
-description: "ptmax|小猿进化史"  
+description: "陈素封|读而立·写而生"  
 baseurl: ""
-url: "http://ptmax.cn"  
+url: "http://cnfeat"  
 
 # About/contact
-owner: "ptmax"
-  name: " ptmax"
-  email: 
-  bio: "小猿进化史"
+owner: 
+  name: " CnFeat"
+  email: CnFeat@gmail.com
+  bio: "写就是写的报酬"
 
 # Data
 gavatar: http://dreamofbook.qiniudn.com/Az..png
@@ -42,7 +43,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "ptmax"
+      author: "CnFeat"
       header-img: "img/green.jpg" # We don't want posts without a header image, that whould mean white on white
 
 # Comments 
