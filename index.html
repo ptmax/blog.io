@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time since your departure</title>
+    <style>
+        div
+        {
+            text-align: center; /*让div内部文字居中*/
+            width: 1080px;
+            height: 240px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        #words
+        {
+            line-height: 96px;
+            font-size: 48px;
+            font-family: '微软雅黑','宋体';
+        }
+        #time
+        {
+            line-height: 120px;
+            font-size: 48px;
+            font-weight: bold;
+            font-family: '微软雅黑','宋体';
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <text id="words">Time since your departure</text>
+        <br>
+        <text id="time">loading</text>
+    </div>
+    <script type="text/javascript">
+
+        window.onload=function(){
+            setInterval(function(){
+                displayTime();
+            },1000);
+
+        }
+
+        function displayTime() {
+            var depTime=new Date();
+            depTime.setFullYear(2018,8,15);
+            depTime.setHours(0);
+            depTime.setMinutes(29);
+            depTime.setSeconds(24);
+
+            var accuTime=new Date();
+
+            var amountTime=accuTime.getTime()-depTime.getTime();
+
+
+            var days=Math.floor(amountTime/(24*3600*1000));
+
+
+            var leave1=amountTime%(24*3600*1000);
+            var hours=Math.floor(leave1/(3600*1000));
+
+            var leave2=leave1%(3600*1000);
+            var minutes=Math.floor(leave2/(60*1000));
+
+
+            var leave3=leave2%(60*1000);
+            var seconds=Math.round(leave3/1000);
+
+            document.getElementById('time').innerHTML=days + ' Days ' + hours + ' Hours ' + minutes + ' Minutes ' + seconds + ' Seconds';
+
+        }
+
+    </script>
+</body>
+</html>
