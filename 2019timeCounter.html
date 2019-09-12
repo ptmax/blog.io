@@ -2,15 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Time since your departure</title>
-    <style>
-        div
+    <title id="title">londing</title>
+    <style type="text/css">
+        #mainContainer
         {
             text-align: center; /*让div内部文字居中*/
             width: 1080px;
             height: 240px;
             margin: auto;
             position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        #copyrightContainer{
+            text-align: center; /*让div内部文字居中*/
+            width: 1080px;
+            height: 40px;
+            margin: auto;
             top: 0;
             left: 0;
             right: 0;
@@ -29,13 +39,31 @@
             font-weight: bold;
             font-family: '微软雅黑','宋体';
         }
+        body{
+            background-image:url(./bgi.jpg);
+            background-repeat:repeat-x;
+            COLOR: #0C2B30;
+        }
+        #copyright{
+            position:absolute;
+            bottom:0px;
+            padding:0px;
+            margin:0px;
+            font-size:20px;
+            color:white;
+            text-align:center
+        }
     </style>
 </head>
 <body>
-    <div>
+    <div id='mainContainer'>
         <text id="words"></text>
         <br>
         <text id="time">loading</text>
+        <br>
+    </div>
+    <div id="copyrightContainer">
+        <text id="copyright">ptmax &  鼠哥 copyright</text>
     </div>
     <script type="text/javascript">
 
@@ -59,8 +87,10 @@
             if(amountTime<0){
                 var amountTime=depTime.getTime() - accuTime.getTime();
                 document.getElementById('words').innerHTML='@呆 will departure in ';
+                document.getElementById('title').innerHTML='You will departure';
             }else{
                 document.getElementById('words').innerHTML='Time since @呆\'s second departure';
+                document.getElementById('title').innerHTML='Time since your departure';
             }
             
 
